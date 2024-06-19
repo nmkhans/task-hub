@@ -36,7 +36,7 @@
                     <a class="nav-link" href="{% url 'edit-task' task.id %}">Edit</a>
                   </button>
                   <button class="btn btn-sm btn-danger">
-                    <a class="nav-link" href="">Delete</a>
+                    <a class="nav-link" href="{% url 'delete-task' task.id %}">Delete</a>
                   </button>
                 </div>
               {% endif %}

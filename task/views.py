@@ -31,3 +31,9 @@ def edit_task(req, id):
     form = TaskForm(instance = task)
 
   return render(req, 'task/edit_task.html', {'form': form})
+
+def delete_task(req, id):
+  post = Task.objects.get(pk = id)
+  post.delete()
+
+  return redirect('home')
