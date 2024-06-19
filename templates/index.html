@@ -17,7 +17,7 @@
               <div class="card-body">
                 <h5 class="card-title">Title: {{task.task_title}}</h5>
                 <p class="card-text">Description: {{task.task_description}}</p>
-                <p class="card-text">Status 
+                <p class="card-text">Status: 
                   {{ task.is_completed | yesno:'completed, not completed' }}
                 </p>
                 <div class="d-flex flex-wrap gap-2">
@@ -33,7 +33,7 @@
               {% else %}
                 <div class="card-footer">
                   <button class="btn btn-sm btn-warning">
-                    <a class="nav-link" href="">Edit</a>
+                    <a class="nav-link" href="{% url 'edit-task' task.id %}">Edit</a>
                   </button>
                   <button class="btn btn-sm btn-danger">
                     <a class="nav-link" href="">Delete</a>
